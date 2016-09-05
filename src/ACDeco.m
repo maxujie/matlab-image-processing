@@ -13,9 +13,6 @@ while st <= length(ac)
     cur_token = num2str(ac(st:ed));
     if ac_dict.isKey(cur_token)
         run_size = ac_dict(cur_token);
-        if run_size(2) == 0
-            run_size(2) = 1;
-        end
         cur_val = Bin2Dec(ac(ed+1:ed+run_size(2)));
         c_ac = [c_ac zeros(1, run_size(1)) cur_val];
         ac_cnt = ac_cnt + run_size(1) + 1;
